@@ -80,15 +80,15 @@ public class KMP {
 
 	
 	
-	private static Map<Integer,String> listOccurences(List<String> textLines, String pattern) {
+	private static List<String> listOccurences(List<String> textLines, String pattern) {
 		
 		int[] carryOver = makeCarryOver(pattern);
-		Map<Integer,String> acceptedLines = new LinkedHashMap<>();
+		List<String> acceptedLines = new ArrayList<>();
 
 		int i = 1;
 		for (String t : textLines){
 			if (KmpMatching(t, pattern, carryOver)){
-				acceptedLines.put(i,t);
+				acceptedLines.add(i + "\t" + t);
 			}
 			i++;
 		}
@@ -99,7 +99,7 @@ public class KMP {
 
 		File textFile = new File("41011-0.txt");
 
-		String pattern = "Chihuahua";
+		String pattern = "Chicago";
 
 		List<String> textLines = new ArrayList<>();
 
@@ -114,10 +114,10 @@ public class KMP {
 				e.printStackTrace();
 			}
 			
-		Map<Integer,String> acceptedLines = listOccurences(textLines, pattern);
+		List<String> acceptedLines = listOccurences(textLines, pattern);
 
-		for (Map.Entry<Integer, String> line : acceptedLines.entrySet()) {
-			System.out.println(line.getKey() + "\t" + line.getValue());
+		for (String line : acceptedLines) {
+			System.out.println(line);
 		}
 		return  ;
 	}

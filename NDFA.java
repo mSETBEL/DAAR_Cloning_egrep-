@@ -15,7 +15,12 @@ public class NDFA {
         this.start = start;
         this.end = end;
     }
-
+    public NDFAstate getStart() {
+        return start;
+    }
+    public NDFAstate getEnd() {
+        return end;
+    }
 
     public void newState() {
         states.add(new NDFAstate(stateCount++));
@@ -30,7 +35,7 @@ public class NDFA {
         NDFAstate start = new NDFAstate(startId);
         NDFAstate end = new NDFAstate(endId);
 
-        start.setTransition(character, endId);
+        start.setTransition(endId, character);
         List<NDFAstate> states = new ArrayList<>();
             states.add(start);
             states.add(end);

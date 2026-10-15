@@ -42,10 +42,16 @@ public class RegEx {
       try {
         RegExTree ret = parse();
         System.out.println("  >> Tree result: "+ret.toString()+".");
-		System.out.println(" NDFA creation in progress...");
-		NDFA ndfa = NDFA.fromRegExTree(ret);
-		System.out.println("NDFA created successfully.");
-		System.out.println(ndfa.toString());
+        
+        System.out.println(" NDFA creation in progress...");
+        NDFA ndfa = NDFA.fromRegExTree(ret);
+        System.out.println("NDFA created successfully.");
+        System.out.println(ndfa.toString());
+
+        System.out.println(" DFA creation in progress...");
+        DFA dfa = DFA.fromNDFA(ndfa);
+        System.out.println("DFA created successfully.");
+        System.out.println(dfa.toString());
 
       } catch (Exception e) {
         System.err.println("  >> ERROR: syntax error for regEx \""+regEx+"\".");

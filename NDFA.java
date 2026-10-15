@@ -35,7 +35,7 @@ public class NDFA {
         NDFAstate start = new NDFAstate(startId);
         NDFAstate end = new NDFAstate(endId);
 
-        start.setTransition(endId, character);
+        start.setTransition(character, endId);
         List<NDFAstate> states = new ArrayList<>();
             states.add(start);
             states.add(end);

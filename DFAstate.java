@@ -37,4 +37,7 @@ public class DFAstate {
     public boolean isAccepting() {
         return accepting;
     }
+    public int getTransition(int character) {
+        return transitions.get(character);
+    }
 }

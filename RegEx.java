@@ -63,6 +63,15 @@ public class RegEx {
     System.out.println("Goodbye Mr. Anderson.");
   }
 
+  // ajout de cette méthode pour pouvoir renvoyer le DFA qu'on obtient
+  //  et l'utiliser directement dans FileSearcher
+  public static DFA buildDFA(String pattern) throws Exception {
+    regEx = pattern;
+    RegExTree tree = parse();
+    NDFA ndfa = NDFA.fromRegExTree(tree);
+    return DFA.fromNDFA(ndfa);
+  }
+
   //FROM REGEX TO SYNTAX TREE
   private static RegExTree parse() throws Exception {
     //BEGIN DEBUG: set conditionnal to true for debug example
@@ -272,4 +281,6 @@ class RegExTree {
     }
     return leaves;
 	}
+
+  
 }

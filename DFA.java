@@ -19,6 +19,13 @@ public class DFA {
 		this.start = start;
 		this.states = states;
 	}
+	// ajout de ces méthodes pour les utiliser dans fileSearcher comme ce sont des attributs privés
+	public DFAstate getStart() { 
+		return start; 
+	}
+	public List<DFAstate> getStates() { 
+		return states; 
+	}
 
 	// Epsilon closure 
 	public static Set<Integer> epsilonClosure (Set<Integer> initial, List<NDFAstate> ndfaStates) {
@@ -185,6 +192,8 @@ public class DFA {
 
         return result.toString();
     }
+
 	
+
 
 }

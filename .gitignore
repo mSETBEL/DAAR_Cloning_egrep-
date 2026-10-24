@@ -1,7 +1,1 @@
-/DFA.class
-/DFAstate.class
-/KMP.class
-/NDFA.class
-/NDFAstate.class
-/RegEx.class
-/RegExTree.class
+*.class

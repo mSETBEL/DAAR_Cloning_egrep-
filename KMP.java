@@ -1,6 +1,7 @@
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.util.Scanner;
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.List;
 import java.util.ArrayList;
 
@@ -84,38 +85,47 @@ public class KMP {
 		int i = 1;
 		for (String t : textLines){
 			if (KmpMatching(t, pattern, carryOver)){
-				acceptedLines.add(i + "\t" + t);
+				acceptedLines.add(i + "\t" + highlightMatches(t, pattern));
 			}
 			i++;
 		}
 		return acceptedLines;
 	}
 
-	public static void main(String[] args) {
+	static String highlightMatches(String line, String pattern) {
+		return line.replaceAll(
+			"(?i)" + java.util.regex.Pattern.quote(pattern),
+			"\u001B[1m$0\u001B[0m"
+		);
+	}
 
-		File textFile = new File("41011-0.txt");
+	public static void main(String[] args) throws IOException {
+		if (args.length != 2) {
+			System.err.println("Usage: java KMP <pattern> <file>");
+			System.exit(1);
+		}
 
-		String pattern = "Chicago";
+		String pattern = args[0];
+		Path textFile = Path.of(args[1]);
 
-		List<String> textLines = new ArrayList<>();
+		List<String> textLines = Files.readAllLines(
+			textFile, StandardCharsets.UTF_8
+		);
 
-	
-		try (Scanner myReader = new Scanner(textFile)) {
-			while (myReader.hasNextLine()) {
-				String line = myReader.nextLine();
-				textLines.add(line);
-			}
-			} catch (FileNotFoundException e) {
-				System.out.println("An error occurred.");
-				e.printStackTrace();
-			}
-			
-		List<String> acceptedLines = listOccurences(textLines, pattern);
+		long start = System.nanoTime();
 
+		List<String> acceptedLines =
+			listOccurences(textLines, pattern);
+
+		long elapsed = System.nanoTime() - start;
+
+		// Send timing to stderr; do not print matching lines.
+		System.err.println("BENCHMARK_NS=" + elapsed);
+		System.err.println("MATCH_COUNT=" + acceptedLines.size());
+		System.out.println("MATCHES:");
 		for (String line : acceptedLines) {
 			System.out.println(line);
 		}
-		return  ;
 	}
 
 }

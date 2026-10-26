@@ -1,9 +1,16 @@
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.ArrayList;
+import java.util.List;
+
 public class BoyerMoore {
 	
 	static void badCharHeuristic(char[] str, int size, int badchar[]) {
 		int i;
 		//initialization
-		for (i = 0; i < 256; i++)
+		for (i = 0; i < badchar.length; i++)
 			badchar[i] = -1;
 		//fill the actual value of last occurrence of a character
 		for (i = 0; i < size; i++)
@@ -35,11 +42,13 @@ public class BoyerMoore {
 		}
 	}
 
-	static void search(char []pat, char []txt){
+	static int search(char []pat, char []txt){
+		int matches = 0;
+		
 		int m = pat.length;
 		int n = txt.length;
 
-		int []badchar = new int[256];
+		int []badchar = new int[Character.MAX_VALUE + 1];
 		badCharHeuristic(pat, m, badchar);
 
 		int []shift = new int[m + 1];
@@ -55,17 +64,62 @@ public class BoyerMoore {
 			while(j >= 0 && pat[j] == txt[s + j])
 				j--;
 			if(j < 0){
-				System.out.println("Pattern found at index: " + s);
+				//System.out.println("Pattern found at index: " + s);
+				matches++;
 				s += (s + m < n) ? m - badchar[txt[s + m]] : 1;
 			}
 			else
 				s += Math.max(shift[j + 1], j - badchar[txt[s + j]]);
 		}
+		return matches;
 	}
 
-	static public void main(String []args){
-		char []text = "ABAAAABAACD".toCharArray();
-    	char []pat = "ABA".toCharArray();
-		search(pat, text);
+	static String highlightMatches(String line, String pattern) {
+		return line.replaceAll(
+			"(?i)" + java.util.regex.Pattern.quote(pattern),
+			"\u001B[1m$0\u001B[0m"
+		);
 	}
+
+	public static void main(String[] args) throws IOException {
+		if (args.length != 2) {
+			System.err.println("Usage: java BoyerMoore <pattern> <file>");
+			System.exit(1);
+		}
+
+		char[] pat = args[0].toCharArray();
+		Path file = Path.of(args[1]);
+
+		List<String> lines = Files.readAllLines(
+			file, StandardCharsets.UTF_8
+		);
+
+		long start = System.nanoTime();
+		int totalMatches = 0;
+		List<Integer> matchingLines = new ArrayList<>();
+
+		for (int i = 0; i < lines.size(); i++) {
+			String line = lines.get(i);
+			char[] chars = line.toCharArray();
+
+			int count = search(pat, chars);
+
+			if (count > 0) {
+				matchingLines.add(i + 1);
+				totalMatches += count;
+			}
+		}
+
+		long elapsed = System.nanoTime() - start;
+
+		System.err.println("BENCHMARK_NS=" + elapsed);
+		System.err.println("MATCH_COUNT=" + totalMatches);
+		for (int lineNumber : matchingLines) {
+			String line = lines.get(lineNumber - 1);
+			System.out.println(lineNumber + "\t" + highlightMatches(line, args[0]));
+		}
+	}
+
+
+
 }

@@ -106,7 +106,7 @@ public class FileSearcher {
                 lineNumber++;
                 if (matches(line)) {
                     count++;
-                    System.out.println(lineNumber + ":" + highlight(line));
+                    System.out.println(lineNumber + "\t" + highlight(line));
                 }
             }
         }
@@ -133,7 +133,13 @@ public class FileSearcher {
         try {
             DFA dfa = RegEx.buildDFA(pattern);
             FileSearcher searcher = new FileSearcher(dfa);
+            long start = System.nanoTime();
+
             int count = searcher.search(path);
+
+            long elapsed = System.nanoTime() - start;
+
+            System.err.println("BENCHMARK_NS=" + elapsed);
             System.err.println(count + " ligne(s) trouvée(s).");
         } catch (IOException e) {
             System.err.println("Erreur de lecture du fichier : " + e.getMessage());

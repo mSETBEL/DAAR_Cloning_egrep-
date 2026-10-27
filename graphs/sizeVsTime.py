@@ -5,7 +5,7 @@ from pathlib import Path
 # Project paths
 ROOT = Path(__file__).resolve().parent.parent
 CSV_FILE = ROOT / "graphs" / "benchmark_results.csv"
-OUTPUT_FILE = ROOT / "graphs" / "graph2_book_size_vs_time.png"
+OUTPUT_FILE = ROOT / "graphs" / "graph2_book_size_vs_time_pizzi.png" 
 
 # Load benchmark results
 df = pd.read_csv(CSV_FILE)

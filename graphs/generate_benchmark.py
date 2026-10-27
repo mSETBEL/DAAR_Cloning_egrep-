@@ -8,11 +8,9 @@ ROOT = Path(__file__).resolve().parent.parent
 DATA_DIR = ROOT / "data"
 OUTPUT = ROOT / "graphs" / "benchmark_results.csv"
 
-PATTERN = "chicago"
+PATTERN = "pizzi"  
 REPEATS = 10
-WARMUPS = 2
 
-# Change these class names/classpaths to match your project.
 COMMANDS = {
     "Aho-Ullman": [
         "java", "-cp", ".", "FileSearcher",
@@ -88,9 +86,6 @@ def main():
 
             for algorithm, command in COMMANDS.items():
                 print(f"{algorithm}: {book.name}")
-
-                for _ in range(WARMUPS):
-                    measure(command, book)
 
                 for run in range(1, REPEATS + 1):
                     elapsed_ms = measure(command, book)

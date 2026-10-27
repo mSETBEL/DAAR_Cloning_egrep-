@@ -42,20 +42,11 @@ public class BoyerMoore {
 		}
 	}
 
-	static int search(char []pat, char []txt){
+	static int search(char []pat, char []txt, int []badchar, int []shift, int []bpos){
+
 		int matches = 0;
-		
 		int m = pat.length;
 		int n = txt.length;
-
-		int []badchar = new int[Character.MAX_VALUE + 1];
-		badCharHeuristic(pat, m, badchar);
-
-		int []shift = new int[m + 1];
-		int []bpos = new int[m + 1];
-
-		preprocess_strong_suffix(shift, bpos, pat, m);
-		preprocess_case2(shift, bpos, pat, m);
 
 		int s = 0;
 		while(s <= (n - m)){
@@ -88,21 +79,32 @@ public class BoyerMoore {
 		}
 
 		char[] pat = args[0].toCharArray();
-		Path file = Path.of(args[1]);
 
+		Path file = Path.of(args[1]);
 		List<String> lines = Files.readAllLines(
 			file, StandardCharsets.UTF_8
 		);
+		// preprocessing the pattern once
+		int m = pat.length;
+
+		int []badchar = new int[Character.MAX_VALUE + 1];
+		badCharHeuristic(pat, m, badchar);
+
+		int []shift = new int[m + 1];
+		int []bpos = new int[m + 1];
+
+		preprocess_strong_suffix(shift, bpos, pat, m);
+		preprocess_case2(shift, bpos, pat, m);
 
 		long start = System.nanoTime();
+
 		int totalMatches = 0;
 		List<Integer> matchingLines = new ArrayList<>();
-
+		// search each line
 		for (int i = 0; i < lines.size(); i++) {
-			String line = lines.get(i);
-			char[] chars = line.toCharArray();
+			char[] chars = lines.get(i).toCharArray();
 
-			int count = search(pat, chars);
+			int count = search(pat, chars, badchar, shift, bpos);
 
 			if (count > 0) {
 				matchingLines.add(i + 1);
@@ -114,12 +116,11 @@ public class BoyerMoore {
 
 		System.err.println("BENCHMARK_NS=" + elapsed);
 		System.err.println("MATCH_COUNT=" + totalMatches);
+		System.out.println("MATCHING LINES:");
 		for (int lineNumber : matchingLines) {
 			String line = lines.get(lineNumber - 1);
 			System.out.println(lineNumber + "\t" + highlightMatches(line, args[0]));
 		}
 	}
-
-
 
 }

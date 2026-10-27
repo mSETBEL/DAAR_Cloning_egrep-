@@ -110,8 +110,14 @@ public class KMP {
 		List<String> textLines = Files.readAllLines(
 			textFile, StandardCharsets.UTF_8
 		);
-		// timing exludes preprocessing of the pattern, which is done once and reused for all lines
+		// preprocessing of the pattern, which is done once and reused for all lines
+		long preprocessStart = System.nanoTime();
+
 		int[] carryOver = makeCarryOver(pattern);
+		
+		long preprocessElapsed = System.nanoTime() - preprocessStart;
+		System.err.println("PREPROCESS_NS=" + preprocessElapsed);
+
 		long start = System.nanoTime();
 
 		List<String> acceptedLines =

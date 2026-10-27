@@ -131,7 +131,13 @@ public class FileSearcher {
         String path = params.get(1);
 
         try {
+            long preprocessStart = System.nanoTime();
+            
             DFA dfa = RegEx.buildDFA(pattern);
+
+            long preprocessElapsed = System.nanoTime() - preprocessStart;
+            System.err.println("PREPROCESS_NS=" + preprocessElapsed);
+
             FileSearcher searcher = new FileSearcher(dfa);
             long start = System.nanoTime();
 

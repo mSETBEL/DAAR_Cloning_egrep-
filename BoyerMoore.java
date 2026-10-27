@@ -86,6 +86,7 @@ public class BoyerMoore {
 		);
 		// preprocessing the pattern once
 		int m = pat.length;
+		long preprocessStart = System.nanoTime();
 
 		int []badchar = new int[Character.MAX_VALUE + 1];
 		badCharHeuristic(pat, m, badchar);
@@ -95,6 +96,9 @@ public class BoyerMoore {
 
 		preprocess_strong_suffix(shift, bpos, pat, m);
 		preprocess_case2(shift, bpos, pat, m);
+
+		long preprocessElapsed = System.nanoTime() - preprocessStart;
+		System.err.println("PREPROCESS_NS=" + preprocessElapsed);	
 
 		long start = System.nanoTime();
 

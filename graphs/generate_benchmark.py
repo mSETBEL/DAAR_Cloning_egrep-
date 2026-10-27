@@ -1,14 +1,12 @@
-
 import csv
-import re
 import subprocess
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA_DIR = ROOT / "data"
-OUTPUT = ROOT / "graphs" / "benchmark_results.csv"
+OUTPUT = ROOT / "graphs" / "benchmark_pre_search.csv"
 
-PATTERN = "pizzi"  
+PATTERN = "pizzi"
 REPEATS = 10
 
 COMMANDS = {
@@ -27,6 +25,17 @@ COMMANDS = {
 }
 
 
+def parse_timing(stderr, key):
+    prefix = f"{key}="
+    for line in stderr.splitlines():
+        if line.startswith(prefix):
+            return int(line[len(prefix):])
+
+    raise ValueError(
+        f"Missing {key} in stderr:\n{stderr}"
+    )
+
+
 def measure(command, book):
     args = [
         item.format(pattern=PATTERN, book=str(book.resolve()))
@@ -43,21 +52,14 @@ def measure(command, book):
 
     if result.returncode != 0:
         raise RuntimeError(
-            f"Command failed: {args}\n{result.stderr}"
-        )
-
-    match = re.search(
-        r"BENCHMARK_NS=(\d+)", result.stderr
-    )
-
-    if not match:
-        raise RuntimeError(
-            f"No BENCHMARK_NS timing found.\n"
-            f"Program: {args}\n"
+            f"Command failed: {args}\n"
             f"stderr: {result.stderr}"
         )
 
-    return int(match.group(1)) / 1_000_000
+    search_ns = parse_timing(result.stderr, "BENCHMARK_NS")
+    preprocess_ns = parse_timing(result.stderr, "PREPROCESS_NS")
+
+    return preprocess_ns / 1_000_000, search_ns / 1_000_000
 
 
 def main():
@@ -72,8 +74,8 @@ def main():
         "book",
         "algorithm",
         "book_size_bytes",
-        "book_size_mib",
         "run",
+        "preprocessing_time_ms",
         "execution_time_ms",
     ]
 
@@ -88,23 +90,23 @@ def main():
                 print(f"{algorithm}: {book.name}")
 
                 for run in range(1, REPEATS + 1):
-                    elapsed_ms = measure(command, book)
+                    preprocess_ms, search_ms = measure(command, book)
 
                     writer.writerow({
                         "book": book.name,
                         "algorithm": algorithm,
                         "book_size_bytes": size,
-                        "book_size_mib": round(
-                            size / (1024 ** 2), 6
-                        ),
                         "run": run,
-                        "execution_time_ms": round(
-                            elapsed_ms, 4
-                        ),
+                        "preprocessing_time_ms": round(preprocess_ms, 4),
+                        "execution_time_ms": round(search_ms, 4),
                     })
 
                     file.flush()
-                    print(f"  Run {run}: {elapsed_ms:.3f} ms")
+                    print(
+                        f"  Run {run}: "
+                        f"preprocessing={preprocess_ms:.4f} ms, "
+                        f"search={search_ms:.3f} ms"
+                    )
 
     print(f"\nCSV created: {OUTPUT}")
 

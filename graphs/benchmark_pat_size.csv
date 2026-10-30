@@ -1,0 +1,316 @@
+text,pattern,pattern_length,algorithm,run,preprocessing_time_ms,execution_time_ms
+04.txt,the,3,FileSearcher,1,42.894066,203.701018
+04.txt,the,3,FileSearcher,2,35.017342,236.602661
+04.txt,the,3,FileSearcher,3,40.713948,230.28325
+04.txt,the,3,FileSearcher,4,35.587789,244.270762
+04.txt,the,3,FileSearcher,5,43.84762,314.967551
+04.txt,the,3,KMP,1,0.018823,137.150185
+04.txt,the,3,KMP,2,0.029623,122.803834
+04.txt,the,3,KMP,3,0.03545,109.627456
+04.txt,the,3,KMP,4,0.054317,106.359678
+04.txt,the,3,KMP,5,0.034288,116.455719
+04.txt,the,3,BoyerMoore,1,0.977301,10.249876
+04.txt,the,3,BoyerMoore,2,1.54016,17.701039
+04.txt,the,3,BoyerMoore,3,1.126091,16.074207
+04.txt,the,3,BoyerMoore,4,1.305947,12.222155
+04.txt,the,3,BoyerMoore,5,1.222731,12.950806
+04.txt,people,6,FileSearcher,1,46.43805,138.086967
+04.txt,people,6,FileSearcher,2,42.210527,131.796993
+04.txt,people,6,FileSearcher,3,44.641723,147.874969
+04.txt,people,6,FileSearcher,4,47.430888,144.346924
+04.txt,people,6,FileSearcher,5,41.851241,156.719609
+04.txt,people,6,KMP,1,0.073183,28.720561
+04.txt,people,6,KMP,2,0.04328,39.304534
+04.txt,people,6,KMP,3,0.115351,30.250811
+04.txt,people,6,KMP,4,0.059963,49.379804
+04.txt,people,6,KMP,5,0.058456,54.970183
+04.txt,people,6,BoyerMoore,1,1.328132,13.769031
+04.txt,people,6,BoyerMoore,2,1.647822,19.179865
+04.txt,people,6,BoyerMoore,3,1.578727,14.385774
+04.txt,people,6,BoyerMoore,4,2.391944,26.021982
+04.txt,people,6,BoyerMoore,5,3.471713,51.756062
+04.txt,dressing,8,FileSearcher,1,47.498611,391.849973
+04.txt,dressing,8,FileSearcher,2,115.411961,482.821725
+04.txt,dressing,8,FileSearcher,3,67.261644,269.598461
+04.txt,dressing,8,FileSearcher,4,75.275279,384.247927
+04.txt,dressing,8,FileSearcher,5,86.903294,415.070543
+04.txt,dressing,8,KMP,1,0.203101,82.659121
+04.txt,dressing,8,KMP,2,0.367665,115.588452
+04.txt,dressing,8,KMP,3,0.124488,86.663079
+04.txt,dressing,8,KMP,4,0.153474,60.371019
+04.txt,dressing,8,KMP,5,0.131686,54.738361
+04.txt,dressing,8,BoyerMoore,1,1.569207,18.068509
+04.txt,dressing,8,BoyerMoore,2,2.438453,17.929038
+04.txt,dressing,8,BoyerMoore,3,2.667834,19.505079
+04.txt,dressing,8,BoyerMoore,4,1.778904,13.029664
+04.txt,dressing,8,BoyerMoore,5,2.065928,15.50744
+04.txt,bye,3,FileSearcher,1,46.641311,195.509027
+04.txt,bye,3,FileSearcher,2,55.930838,241.791657
+04.txt,bye,3,FileSearcher,3,46.406868,183.938573
+04.txt,bye,3,FileSearcher,4,50.706625,238.060742
+04.txt,bye,3,FileSearcher,5,47.34149,225.392342
+04.txt,bye,3,KMP,1,0.031378,56.979238
+04.txt,bye,3,KMP,2,0.03629,53.879637
+04.txt,bye,3,KMP,3,0.025373,51.970984
+04.txt,bye,3,KMP,4,0.025012,43.409374
+04.txt,bye,3,KMP,5,0.030562,56.453682
+04.txt,bye,3,BoyerMoore,1,1.937025,16.467157
+04.txt,bye,3,BoyerMoore,2,2.029262,21.810481
+04.txt,bye,3,BoyerMoore,3,2.030992,34.181946
+04.txt,bye,3,BoyerMoore,4,2.023752,17.989596
+04.txt,bye,3,BoyerMoore,5,2.141086,49.72295
+04.txt,enough,6,FileSearcher,1,62.983065,265.682003
+04.txt,enough,6,FileSearcher,2,57.085331,213.135559
+04.txt,enough,6,FileSearcher,3,48.715261,393.704367
+04.txt,enough,6,FileSearcher,4,71.553746,221.475229
+04.txt,enough,6,FileSearcher,5,55.162252,209.051504
+04.txt,enough,6,KMP,1,0.057557,66.124228
+04.txt,enough,6,KMP,2,0.061412,53.816969
+04.txt,enough,6,KMP,3,0.137426,59.634977
+04.txt,enough,6,KMP,4,0.067839,58.018308
+04.txt,enough,6,KMP,5,0.108449,98.163969
+04.txt,enough,6,BoyerMoore,1,2.296312,19.488794
+04.txt,enough,6,BoyerMoore,2,1.846351,13.987124
+04.txt,enough,6,BoyerMoore,3,1.585479,16.709695
+04.txt,enough,6,BoyerMoore,4,1.843453,18.512532
+04.txt,enough,6,BoyerMoore,5,1.555373,17.247086
+04.txt,bip,3,FileSearcher,1,48.066169,178.498941
+04.txt,bip,3,FileSearcher,2,47.778584,254.542043
+04.txt,bip,3,FileSearcher,3,52.175465,167.892918
+04.txt,bip,3,FileSearcher,4,50.408333,164.529812
+04.txt,bip,3,FileSearcher,5,50.605237,164.79951
+04.txt,bip,3,KMP,1,0.032326,35.065193
+04.txt,bip,3,KMP,2,0.03441,26.402167
+04.txt,bip,3,KMP,3,0.029231,18.344387
+04.txt,bip,3,KMP,4,0.023939,19.446033
+04.txt,bip,3,KMP,5,0.02658,17.902758
+04.txt,bip,3,BoyerMoore,1,1.219679,15.181268
+04.txt,bip,3,BoyerMoore,2,1.636023,12.085678
+04.txt,bip,3,BoyerMoore,3,1.626315,13.803121
+04.txt,bip,3,BoyerMoore,4,1.428886,13.513419
+04.txt,bip,3,BoyerMoore,5,1.524975,16.487264
+04.txt,burp,4,FileSearcher,1,48.545234,154.741762
+04.txt,burp,4,FileSearcher,2,43.048752,137.151255
+04.txt,burp,4,FileSearcher,3,55.14446,227.541621
+04.txt,burp,4,FileSearcher,4,62.865618,267.894666
+04.txt,burp,4,FileSearcher,5,57.791274,174.588255
+04.txt,burp,4,KMP,1,0.08674,26.415714
+04.txt,burp,4,KMP,2,0.072313,20.902712
+04.txt,burp,4,KMP,3,0.04425,29.394131
+04.txt,burp,4,KMP,4,0.067613,20.982136
+04.txt,burp,4,KMP,5,0.136905,36.917288
+04.txt,burp,4,BoyerMoore,1,2.041407,14.846665
+04.txt,burp,4,BoyerMoore,2,2.253149,18.661589
+04.txt,burp,4,BoyerMoore,3,2.680019,15.273374
+04.txt,burp,4,BoyerMoore,4,1.83149,23.731967
+04.txt,burp,4,BoyerMoore,5,1.822221,18.84199
+04.txt,fananhanta,10,FileSearcher,1,75.936219,181.595227
+04.txt,fananhanta,10,FileSearcher,2,51.682607,130.345966
+04.txt,fananhanta,10,FileSearcher,3,119.761751,333.254678
+04.txt,fananhanta,10,FileSearcher,4,77.637504,1185.11404
+04.txt,fananhanta,10,FileSearcher,5,60.796226,211.785746
+04.txt,fananhanta,10,KMP,1,0.30788,27.467582
+04.txt,fananhanta,10,KMP,2,0.161902,30.066404
+04.txt,fananhanta,10,KMP,3,0.11781,27.492461
+04.txt,fananhanta,10,KMP,4,0.22293,22.116131
+04.txt,fananhanta,10,KMP,5,0.125329,32.5012
+04.txt,fananhanta,10,BoyerMoore,1,2.294533,22.033384
+04.txt,fananhanta,10,BoyerMoore,2,2.140146,17.05925
+04.txt,fananhanta,10,BoyerMoore,3,2.403995,27.348392
+04.txt,fananhanta,10,BoyerMoore,4,2.063736,20.103578
+04.txt,fananhanta,10,BoyerMoore,5,1.533889,11.937168
+04.txt,sufficienm,10,FileSearcher,1,60.470746,172.185163
+04.txt,sufficienm,10,FileSearcher,2,67.146011,235.669339
+04.txt,sufficienm,10,FileSearcher,3,59.347736,173.16805
+04.txt,sufficienm,10,FileSearcher,4,58.641581,150.618611
+04.txt,sufficienm,10,FileSearcher,5,57.623519,338.034933
+04.txt,sufficienm,10,KMP,1,0.233817,25.508739
+04.txt,sufficienm,10,KMP,2,0.385026,30.944412
+04.txt,sufficienm,10,KMP,3,0.16127,23.825278
+04.txt,sufficienm,10,KMP,4,0.388421,26.607712
+04.txt,sufficienm,10,KMP,5,0.380477,25.095042
+04.txt,sufficienm,10,BoyerMoore,1,1.702135,14.499125
+04.txt,sufficienm,10,BoyerMoore,2,1.331658,12.475355
+04.txt,sufficienm,10,BoyerMoore,3,1.93769,12.994293
+04.txt,sufficienm,10,BoyerMoore,4,1.757879,11.244985
+04.txt,sufficienm,10,BoyerMoore,5,1.649974,12.871886
+04.txt,oncredulity,11,FileSearcher,1,63.466469,152.208966
+04.txt,oncredulity,11,FileSearcher,2,57.010431,138.019272
+04.txt,oncredulity,11,FileSearcher,3,59.686685,364.57336
+04.txt,oncredulity,11,FileSearcher,4,54.701418,184.149553
+04.txt,oncredulity,11,FileSearcher,5,50.916487,132.768561
+04.txt,oncredulity,11,KMP,1,0.202829,26.003708
+04.txt,oncredulity,11,KMP,2,0.162773,36.460307
+04.txt,oncredulity,11,KMP,3,0.348663,29.705737
+04.txt,oncredulity,11,KMP,4,0.151145,20.264463
+04.txt,oncredulity,11,KMP,5,0.11963,18.698208
+04.txt,oncredulity,11,BoyerMoore,1,1.556906,12.261656
+04.txt,oncredulity,11,BoyerMoore,2,1.721461,11.58743
+04.txt,oncredulity,11,BoyerMoore,3,1.753793,9.293156
+04.txt,oncredulity,11,BoyerMoore,4,1.37731,10.464882
+04.txt,oncredulity,11,BoyerMoore,5,1.554655,13.708488
+04.txt,ut there was no great difficulty,32,FileSearcher,1,225.233105,176.146929
+04.txt,ut there was no great difficulty,32,FileSearcher,2,93.331914,174.756879
+04.txt,ut there was no great difficulty,32,FileSearcher,3,69.127698,182.01054
+04.txt,ut there was no great difficulty,32,FileSearcher,4,82.12335,175.625785
+04.txt,ut there was no great difficulty,32,FileSearcher,5,80.651403,211.99053
+04.txt,ut there was no great difficulty,32,KMP,1,2.253093,39.353377
+04.txt,ut there was no great difficulty,32,KMP,2,2.010701,90.484375
+04.txt,ut there was no great difficulty,32,KMP,3,2.654229,57.364292
+04.txt,ut there was no great difficulty,32,KMP,4,2.082458,43.59353
+04.txt,ut there was no great difficulty,32,KMP,5,3.833883,73.830184
+04.txt,ut there was no great difficulty,32,BoyerMoore,1,1.712663,16.808419
+04.txt,ut there was no great difficulty,32,BoyerMoore,2,1.642607,15.065896
+04.txt,ut there was no great difficulty,32,BoyerMoore,3,2.05746,21.635785
+04.txt,ut there was no great difficulty,32,BoyerMoore,4,2.050605,15.54117
+04.txt,ut there was no great difficulty,32,BoyerMoore,5,2.08695,18.823186
+04.txt,so that they may meet any little expenses of their journey,58,FileSearcher,1,110.490862,186.819321
+04.txt,so that they may meet any little expenses of their journey,58,FileSearcher,2,104.246025,226.351017
+04.txt,so that they may meet any little expenses of their journey,58,FileSearcher,3,115.639835,182.515674
+04.txt,so that they may meet any little expenses of their journey,58,FileSearcher,4,114.198907,202.682197
+04.txt,so that they may meet any little expenses of their journey,58,FileSearcher,5,113.772665,255.261974
+04.txt,so that they may meet any little expenses of their journey,58,KMP,1,4.202432,50.485737
+04.txt,so that they may meet any little expenses of their journey,58,KMP,2,4.181262,45.005021
+04.txt,so that they may meet any little expenses of their journey,58,KMP,3,3.451581,44.895654
+04.txt,so that they may meet any little expenses of their journey,58,KMP,4,2.610035,57.671232
+04.txt,so that they may meet any little expenses of their journey,58,KMP,5,3.569256,55.295434
+04.txt,so that they may meet any little expenses of their journey,58,BoyerMoore,1,1.714537,14.291302
+04.txt,so that they may meet any little expenses of their journey,58,BoyerMoore,2,1.286771,13.14511
+04.txt,so that they may meet any little expenses of their journey,58,BoyerMoore,3,1.347533,14.153396
+04.txt,so that they may meet any little expenses of their journey,58,BoyerMoore,4,1.373763,12.959212
+04.txt,so that they may meet any little expenses of their journey,58,BoyerMoore,5,1.914729,14.519306
+04.txt,there seems to me to be only one possible solution,50,FileSearcher,1,96.428521,231.15972
+04.txt,there seems to me to be only one possible solution,50,FileSearcher,2,126.142424,280.1832
+04.txt,there seems to me to be only one possible solution,50,FileSearcher,3,211.15367,332.930665
+04.txt,there seems to me to be only one possible solution,50,FileSearcher,4,179.842448,337.469828
+04.txt,there seems to me to be only one possible solution,50,FileSearcher,5,130.134985,233.407377
+04.txt,there seems to me to be only one possible solution,50,KMP,1,3.382216,56.772232
+04.txt,there seems to me to be only one possible solution,50,KMP,2,2.879056,70.241279
+04.txt,there seems to me to be only one possible solution,50,KMP,3,3.739856,103.391344
+04.txt,there seems to me to be only one possible solution,50,KMP,4,2.821138,39.017151
+04.txt,there seems to me to be only one possible solution,50,KMP,5,2.341375,46.164488
+04.txt,there seems to me to be only one possible solution,50,BoyerMoore,1,3.606963,24.449151
+04.txt,there seems to me to be only one possible solution,50,BoyerMoore,2,2.342078,20.861609
+04.txt,there seems to me to be only one possible solution,50,BoyerMoore,3,2.363144,16.166126
+04.txt,there seems to me to be only one possible solution,50,BoyerMoore,4,1.803796,19.429868
+04.txt,there seems to me to be only one possible solution,50,BoyerMoore,5,1.902953,16.254849
+04.txt,Hence those vows of fidelity exacted upon a Testament,53,FileSearcher,1,119.430783,149.861603
+04.txt,Hence those vows of fidelity exacted upon a Testament,53,FileSearcher,2,105.145492,397.231853
+04.txt,Hence those vows of fidelity exacted upon a Testament,53,FileSearcher,3,116.940164,171.770413
+04.txt,Hence those vows of fidelity exacted upon a Testament,53,FileSearcher,4,108.970118,152.801281
+04.txt,Hence those vows of fidelity exacted upon a Testament,53,FileSearcher,5,111.590491,193.682192
+04.txt,Hence those vows of fidelity exacted upon a Testament,53,KMP,1,3.592104,20.678448
+04.txt,Hence those vows of fidelity exacted upon a Testament,53,KMP,2,4.466572,25.048762
+04.txt,Hence those vows of fidelity exacted upon a Testament,53,KMP,3,3.067913,23.928114
+04.txt,Hence those vows of fidelity exacted upon a Testament,53,KMP,4,2.895573,25.552458
+04.txt,Hence those vows of fidelity exacted upon a Testament,53,KMP,5,2.720498,22.385866
+04.txt,Hence those vows of fidelity exacted upon a Testament,53,BoyerMoore,1,1.369056,13.483919
+04.txt,Hence those vows of fidelity exacted upon a Testament,53,BoyerMoore,2,1.650011,13.545024
+04.txt,Hence those vows of fidelity exacted upon a Testament,53,BoyerMoore,3,2.382944,16.476901
+04.txt,Hence those vows of fidelity exacted upon a Testament,53,BoyerMoore,4,1.776998,12.178299
+04.txt,Hence those vows of fidelity exacted upon a Testament,53,BoyerMoore,5,1.848793,17.854455
+04.txt,Suddenly there was the momentary gleam of a light up in the direction of the ventilator,87,FileSearcher,1,306.818764,194.480233
+04.txt,Suddenly there was the momentary gleam of a light up in the direction of the ventilator,87,FileSearcher,2,278.060847,201.062685
+04.txt,Suddenly there was the momentary gleam of a light up in the direction of the ventilator,87,FileSearcher,3,291.555614,175.678698
+04.txt,Suddenly there was the momentary gleam of a light up in the direction of the ventilator,87,FileSearcher,4,186.891463,208.04228
+04.txt,Suddenly there was the momentary gleam of a light up in the direction of the ventilator,87,FileSearcher,5,180.773657,146.013319
+04.txt,Suddenly there was the momentary gleam of a light up in the direction of the ventilator,87,KMP,1,5.108581,43.799212
+04.txt,Suddenly there was the momentary gleam of a light up in the direction of the ventilator,87,KMP,2,4.076772,33.228424
+04.txt,Suddenly there was the momentary gleam of a light up in the direction of the ventilator,87,KMP,3,5.125841,38.715991
+04.txt,Suddenly there was the momentary gleam of a light up in the direction of the ventilator,87,KMP,4,8.603567,34.262555
+04.txt,Suddenly there was the momentary gleam of a light up in the direction of the ventilator,87,KMP,5,5.248671,22.951994
+04.txt,Suddenly there was the momentary gleam of a light up in the direction of the ventilator,87,BoyerMoore,1,1.185542,19.68601
+04.txt,Suddenly there was the momentary gleam of a light up in the direction of the ventilator,87,BoyerMoore,2,1.566226,12.11738
+04.txt,Suddenly there was the momentary gleam of a light up in the direction of the ventilator,87,BoyerMoore,3,1.535245,16.806348
+04.txt,Suddenly there was the momentary gleam of a light up in the direction of the ventilator,87,BoyerMoore,4,1.915218,9.793864
+04.txt,Suddenly there was the momentary gleam of a light up in the direction of the ventilator,87,BoyerMoore,5,1.893039,11.823737
+04.txt,people have the right to protest don't they,43,FileSearcher,1,87.035453,135.095376
+04.txt,people have the right to protest don't they,43,FileSearcher,2,85.414225,144.083499
+04.txt,people have the right to protest don't they,43,FileSearcher,3,96.932032,151.696517
+04.txt,people have the right to protest don't they,43,FileSearcher,4,102.568868,127.268305
+04.txt,people have the right to protest don't they,43,FileSearcher,5,95.570117,144.792422
+04.txt,people have the right to protest don't they,43,KMP,1,1.66725,14.263995
+04.txt,people have the right to protest don't they,43,KMP,2,1.910633,26.208935
+04.txt,people have the right to protest don't they,43,KMP,3,2.3751,21.795251
+04.txt,people have the right to protest don't they,43,KMP,4,2.068439,18.309232
+04.txt,people have the right to protest don't they,43,KMP,5,1.936862,21.593023
+04.txt,people have the right to protest don't they,43,BoyerMoore,1,1.314659,10.133122
+04.txt,people have the right to protest don't they,43,BoyerMoore,2,2.443895,12.188777
+04.txt,people have the right to protest don't they,43,BoyerMoore,3,1.49855,11.379704
+04.txt,people have the right to protest don't they,43,BoyerMoore,4,1.873619,16.271157
+04.txt,people have the right to protest don't they,43,BoyerMoore,5,1.668522,15.294072
+04.txt,because i can't imagine a small window on that wall,51,FileSearcher,1,94.501417,148.481999
+04.txt,because i can't imagine a small window on that wall,51,FileSearcher,2,105.285534,127.512359
+04.txt,because i can't imagine a small window on that wall,51,FileSearcher,3,100.842431,328.867977
+04.txt,because i can't imagine a small window on that wall,51,FileSearcher,4,126.922337,171.98564
+04.txt,because i can't imagine a small window on that wall,51,FileSearcher,5,103.194549,159.147137
+04.txt,because i can't imagine a small window on that wall,51,KMP,1,3.386992,23.168957
+04.txt,because i can't imagine a small window on that wall,51,KMP,2,3.412015,17.151978
+04.txt,because i can't imagine a small window on that wall,51,KMP,3,2.230021,16.050625
+04.txt,because i can't imagine a small window on that wall,51,KMP,4,2.61629,20.416987
+04.txt,because i can't imagine a small window on that wall,51,KMP,5,2.240204,19.118701
+04.txt,because i can't imagine a small window on that wall,51,BoyerMoore,1,1.38974,8.525737
+04.txt,because i can't imagine a small window on that wall,51,BoyerMoore,2,1.960647,14.347458
+04.txt,because i can't imagine a small window on that wall,51,BoyerMoore,3,1.431121,11.344096
+04.txt,because i can't imagine a small window on that wall,51,BoyerMoore,4,1.964046,13.59296
+04.txt,because i can't imagine a small window on that wall,51,BoyerMoore,5,1.770096,13.557799
+04.txt,ringhanapanioiidp mwxoxujakjhhat hanmpmondaynight,49,FileSearcher,1,108.857809,194.853682
+04.txt,ringhanapanioiidp mwxoxujakjhhat hanmpmondaynight,49,FileSearcher,2,90.883445,150.808983
+04.txt,ringhanapanioiidp mwxoxujakjhhat hanmpmondaynight,49,FileSearcher,3,107.727095,266.502007
+04.txt,ringhanapanioiidp mwxoxujakjhhat hanmpmondaynight,49,FileSearcher,4,90.575584,160.071911
+04.txt,ringhanapanioiidp mwxoxujakjhhat hanmpmondaynight,49,FileSearcher,5,87.03982,140.335723
+04.txt,ringhanapanioiidp mwxoxujakjhhat hanmpmondaynight,49,KMP,1,3.243621,19.70383
+04.txt,ringhanapanioiidp mwxoxujakjhhat hanmpmondaynight,49,KMP,2,3.092321,20.540903
+04.txt,ringhanapanioiidp mwxoxujakjhhat hanmpmondaynight,49,KMP,3,2.527483,23.449413
+04.txt,ringhanapanioiidp mwxoxujakjhhat hanmpmondaynight,49,KMP,4,3.549659,19.087613
+04.txt,ringhanapanioiidp mwxoxujakjhhat hanmpmondaynight,49,KMP,5,2.379551,19.50286
+04.txt,ringhanapanioiidp mwxoxujakjhhat hanmpmondaynight,49,BoyerMoore,1,1.390158,13.219531
+04.txt,ringhanapanioiidp mwxoxujakjhhat hanmpmondaynight,49,BoyerMoore,2,1.279372,13.077103
+04.txt,ringhanapanioiidp mwxoxujakjhhat hanmpmondaynight,49,BoyerMoore,3,1.065167,10.462359
+04.txt,ringhanapanioiidp mwxoxujakjhhat hanmpmondaynight,49,BoyerMoore,4,2.114019,10.904729
+04.txt,ringhanapanioiidp mwxoxujakjhhat hanmpmondaynight,49,BoyerMoore,5,1.115386,8.632732
+04.txt,percentage ifhuhdjpappa haugs hdn haapeppenn happen,51,FileSearcher,1,102.825167,119.865179
+04.txt,percentage ifhuhdjpappa haugs hdn haapeppenn happen,51,FileSearcher,2,106.663587,157.7935
+04.txt,percentage ifhuhdjpappa haugs hdn haapeppenn happen,51,FileSearcher,3,109.219706,157.473303
+04.txt,percentage ifhuhdjpappa haugs hdn haapeppenn happen,51,FileSearcher,4,102.494948,124.768225
+04.txt,percentage ifhuhdjpappa haugs hdn haapeppenn happen,51,FileSearcher,5,100.412394,141.518766
+04.txt,percentage ifhuhdjpappa haugs hdn haapeppenn happen,51,KMP,1,2.751679,26.573907
+04.txt,percentage ifhuhdjpappa haugs hdn haapeppenn happen,51,KMP,2,4.103485,30.400905
+04.txt,percentage ifhuhdjpappa haugs hdn haapeppenn happen,51,KMP,3,3.184127,19.44552
+04.txt,percentage ifhuhdjpappa haugs hdn haapeppenn happen,51,KMP,4,2.991452,15.506745
+04.txt,percentage ifhuhdjpappa haugs hdn haapeppenn happen,51,KMP,5,2.307693,15.424166
+04.txt,percentage ifhuhdjpappa haugs hdn haapeppenn happen,51,BoyerMoore,1,2.118931,13.752835
+04.txt,percentage ifhuhdjpappa haugs hdn haapeppenn happen,51,BoyerMoore,2,1.390266,20.802456
+04.txt,percentage ifhuhdjpappa haugs hdn haapeppenn happen,51,BoyerMoore,3,1.168041,8.641813
+04.txt,percentage ifhuhdjpappa haugs hdn haapeppenn happen,51,BoyerMoore,4,2.155689,10.456097
+04.txt,percentage ifhuhdjpappa haugs hdn haapeppenn happen,51,BoyerMoore,5,2.209849,13.032076
+04.txt,open the shuttte hahen,22,FileSearcher,1,76.436175,146.616555
+04.txt,open the shuttte hahen,22,FileSearcher,2,52.835068,127.145593
+04.txt,open the shuttte hahen,22,FileSearcher,3,66.506437,151.805901
+04.txt,open the shuttte hahen,22,FileSearcher,4,70.641853,141.474143
+04.txt,open the shuttte hahen,22,FileSearcher,5,55.722883,131.376972
+04.txt,open the shuttte hahen,22,KMP,1,1.065264,15.298501
+04.txt,open the shuttte hahen,22,KMP,2,1.348848,23.828432
+04.txt,open the shuttte hahen,22,KMP,3,1.495148,24.123727
+04.txt,open the shuttte hahen,22,KMP,4,1.192715,28.777436
+04.txt,open the shuttte hahen,22,KMP,5,1.053277,19.353953
+04.txt,open the shuttte hahen,22,BoyerMoore,1,0.976275,9.137445
+04.txt,open the shuttte hahen,22,BoyerMoore,2,1.570873,9.650291
+04.txt,open the shuttte hahen,22,BoyerMoore,3,1.600478,15.898068
+04.txt,open the shuttte hahen,22,BoyerMoore,4,2.551916,16.928776
+04.txt,open the shuttte hahen,22,BoyerMoore,5,1.337723,9.693558
+04.txt,wmpwpskjahofnamncioandjhstbdkp,30,FileSearcher,1,66.591713,139.297032
+04.txt,wmpwpskjahofnamncioandjhstbdkp,30,FileSearcher,2,64.851709,150.013058
+04.txt,wmpwpskjahofnamncioandjhstbdkp,30,FileSearcher,3,67.123553,367.01571
+04.txt,wmpwpskjahofnamncioandjhstbdkp,30,FileSearcher,4,101.7085,200.127961
+04.txt,wmpwpskjahofnamncioandjhstbdkp,30,FileSearcher,5,77.477206,172.116871
+04.txt,wmpwpskjahofnamncioandjhstbdkp,30,KMP,1,2.271482,39.225259
+04.txt,wmpwpskjahofnamncioandjhstbdkp,30,KMP,2,2.064126,28.993096
+04.txt,wmpwpskjahofnamncioandjhstbdkp,30,KMP,3,2.23514,25.190154
+04.txt,wmpwpskjahofnamncioandjhstbdkp,30,KMP,4,1.95089,21.953501
+04.txt,wmpwpskjahofnamncioandjhstbdkp,30,KMP,5,2.555606,22.741532
+04.txt,wmpwpskjahofnamncioandjhstbdkp,30,BoyerMoore,1,1.70059,13.1594
+04.txt,wmpwpskjahofnamncioandjhstbdkp,30,BoyerMoore,2,1.141291,10.824476
+04.txt,wmpwpskjahofnamncioandjhstbdkp,30,BoyerMoore,3,1.923054,17.849863
+04.txt,wmpwpskjahofnamncioandjhstbdkp,30,BoyerMoore,4,1.826422,11.653971
+04.txt,wmpwpskjahofnamncioandjhstbdkp,30,BoyerMoore,5,1.696277,14.027527
